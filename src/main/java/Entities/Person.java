@@ -1,9 +1,13 @@
+package Entities;
+
+import Entities.Department;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Person - класс для хранения данных о человеке
+ * Entities.Person - класс для хранения данных о человеке
  */
 public class Person {
     private long id;
@@ -74,5 +78,12 @@ public class Person {
      */
     Date getBirthday(){
         return birthday;
+    }
+    /**
+     * метод для преобразования данных класса к строке
+     * @return  - полученная строка
+     */
+    public String toString(){
+        return "id = " + getId() + ", lastName=" + getLastName() + ", gender=" + getGender() + ", birthday=" + getBirthday() + ", department=" + getDepartment().getName() + ", salary= " + getSalary();
     }
 }
